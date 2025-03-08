@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-	let flyingPaperSound =
-			"https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/flyingpaper.mp3",
-		takingPaperSound =
-			"https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/takepaper.mp3",
-		rotatingPaper =
-			"https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/paperRotating.mp3",
-		stampMachine =
-			"https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/stampmachine.mp3",
-		carelessWhisper =
-			"https://github.com/MrGregor228/Notes-For-Piano/blob/master/paper%20sound/george-michael_careless-whisper.mp3?raw=true";
+	const paper_container = document.getElementsByClassName('paper')[0];
+		const wrapper_container = document.getElementsByClassName('letter-wrapper')[0];
+		if (document.body.clientWidth < 568) {
+			paper_container.style.scale = 0.75;
+			wrapper_container.style.scale = 0.75;
+		}
+	let flyingPaperSound = "https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/flyingpaper.mp3",
+		takingPaperSound = "https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/takepaper.mp3",
+		rotatingPaper = "https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/paperRotating.mp3",
+		stampMachine = "https://raw.githubusercontent.com/MrGregor228/Notes-For-Piano/master/paper%20sound/stampmachine.mp3",
+		carelessWhisper = "https://github.com/MrGregor228/Notes-For-Piano/blob/master/paper%20sound/george-michael_careless-whisper.mp3?raw=true";
 
 	let firstSound = new Audio();
 	firstSound.volume = [0.2];
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const text1 =
-			"Желаем вам чудесных дней,^500 наполненных радостными событиями, красивыми словами, любовью и душевностью.^1000 Пусть ваши желания исполняются всё чаще, близкие окружают вас теплом и нежностью,^400 заботой и безграничным вниманием.^600 Счастья Вам и пусть оно не заканчивается! И с праздником весны прекрасным!",
+		"Желаем вам чудесных дней,^500 наполненных радостными событиями, красивыми словами, любовью и душевностью.^1000 Пусть ваши желания исполняются всё чаще, близкие окружают вас теплом и нежностью,^400 заботой и безграничным вниманием.^600 Счастья Вам и пусть оно не заканчивается! И с праздником весны прекрасным!",
 		text2 =
 			"Пускай красочными будут ваши дни, а в вашей жизни случаются самые настоящие и невероятные чудеса. Желаю теплой, солнечной и радостной весны, чтобы вы всегда были согреты ласковым словом, делом и любовью родных людей. Желаю благополучия, чтобы в вашем доме и сердцах всегда был покой, уют и счастье. С 8 Марта!";
 

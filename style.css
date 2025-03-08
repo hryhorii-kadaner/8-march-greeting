@@ -83,6 +83,7 @@ body {
   transform: translate(-50%, -50%);
   padding: 40px 25px;
   transition: padding 0.8s ease-in 1.5s, min-height 0.8s ease-in 1.5s, top 0.5s linear 0.8s, left 0.5s linear 0.8s, transform 0.5s ease-out 0.8s;
+  transform-origin: top left;
 }
 .container .paper .flex {
   display: flex;
@@ -109,6 +110,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: left;
 }
 .container .letter-wrapper.clicked .stamp {
   width: 0px;
@@ -132,13 +134,19 @@ body {
   text-align: center;
   transform: translate(-50%, -50%);
   z-index: 4;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 .container .letter-wrapper .ask-name p {
   font-family: "Marck Script", cursive;
   font-size: 30px;
-  user-select: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -194,13 +202,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 5;
-  clip-path: polygon(0 0, 100% 0%, 100% 40%, 50% 100%, 0 40%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 40%, 50% 100%, 0 40%);
+          clip-path: polygon(0 0, 100% 0%, 100% 40%, 50% 100%, 0 40%);
   transition: transform 0.2s linear 0.5s;
   transform-origin: top;
   cursor: pointer;
 }
 .container .letter-wrapper .letter-closure:hover:before {
-  animation: hintRed 0.5s linear infinite both;
+  -webkit-animation: hintRed 0.5s linear infinite both;
+          animation: hintRed 0.5s linear infinite both;
 }
 .container .letter-wrapper .letter-closure:before {
   content: "";
@@ -209,7 +219,8 @@ body {
   width: 100%;
   opacity: 0.15;
   transition: 0.2s linear;
-  animation: hintRed 0.5s linear 1.5s 2 both;
+  -webkit-animation: hintRed 0.5s linear 1.5s 2 both;
+          animation: hintRed 0.5s linear 1.5s 2 both;
 }
 .container .letter-wrapper .letter-closure.opened {
   transition: transform 0.2s linear 0.2s;
@@ -218,7 +229,10 @@ body {
 .container .letter-wrapper .letter-closure.opened + .ask-name {
   pointer-events: initial;
   opacity: 1;
-  user-select: default;
+  -webkit-user-select: default;
+     -moz-user-select: default;
+      -ms-user-select: default;
+          user-select: default;
   transition: opacity 0.3s linear 0.7s;
 }
 .container .letter-wrapper .letter-body {
@@ -228,7 +242,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   z-index: 3;
-  animation: hintGreen 0.5s linear 2 both;
+  -webkit-animation: hintGreen 0.5s linear 2 both;
+          animation: hintGreen 0.5s linear 2 both;
 }
 .container .letter-wrapper .letter-body .left-side {
   position: absolute;
@@ -238,7 +253,8 @@ body {
   width: 50%;
   background: url("https://i.ibb.co/GQnx18W/old-paper.jpg");
   background-position: 0 0;
-  clip-path: polygon(0 0, 0% 100%, 50% 50%);
+  -webkit-clip-path: polygon(0 0, 0% 100%, 50% 50%);
+          clip-path: polygon(0 0, 0% 100%, 50% 50%);
   z-index: 1;
   transition: transform 0.2s linear 0.3s;
   transform-origin: left;
@@ -248,7 +264,8 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  animation: hintGreen 0.5s linear 2 both;
+  -webkit-animation: hintGreen 0.5s linear 2 both;
+          animation: hintGreen 0.5s linear 2 both;
 }
 .container .letter-wrapper .letter-body .left-side.opened {
   transition: transform 0.2s linear 0.3s;
@@ -259,7 +276,8 @@ body {
   bottom: 0;
   height: 200px;
   width: 100%;
-  clip-path: polygon(20% 40%, 80% 40%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(20% 40%, 80% 40%, 100% 100%, 0 100%);
+          clip-path: polygon(20% 40%, 80% 40%, 100% 100%, 0 100%);
   background: url("https://i.ibb.co/GQnx18W/old-paper.jpg");
   background-position: center center;
   z-index: 4;
@@ -271,7 +289,8 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  animation: hintGreen 0.5s linear 2 both;
+  -webkit-animation: hintGreen 0.5s linear 2 both;
+          animation: hintGreen 0.5s linear 2 both;
 }
 .container .letter-wrapper .letter-body .center.opened {
   transition: transform 0.2s linear 0.4s;
@@ -285,7 +304,8 @@ body {
   top: 0;
   width: 50%;
   position: absolute;
-  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+          clip-path: polygon(100% 0, 100% 100%, 50% 50%);
   z-index: 3;
   transition: transform 0.2s linear 0.5s;
   transform-origin: right;
@@ -295,11 +315,24 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  animation: hintGreen 0.5s linear 2 both;
+  -webkit-animation: hintGreen 0.5s linear 2 both;
+          animation: hintGreen 0.5s linear 2 both;
 }
 .container .letter-wrapper .letter-body .right-side.opened {
   transition: transform 0.2s linear 0.5s;
   transform: translateX(0%) rotateY(-180deg);
+}
+
+@-webkit-keyframes hintRed {
+  0% {
+    background-color: rgba(255, 0, 0, 0);
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0);
+  }
 }
 
 @keyframes hintRed {
@@ -311,6 +344,17 @@ body {
   }
   100% {
     background-color: rgba(255, 0, 0, 0);
+  }
+}
+@-webkit-keyframes hintGreen {
+  0% {
+    background-color: rgba(0, 128, 0, 0);
+  }
+  50% {
+    background-color: rgba(0, 128, 0, 0.15);
+  }
+  100% {
+    background-color: rgba(0, 128, 0, 0);
   }
 }
 @keyframes hintGreen {
